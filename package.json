@@ -1,7 +1,8 @@
 {
   "type": "module",
   "scripts": {
-    "dev": "giri serve"
+    "dev": "giri serve",
+    "build": "giri sync"
   },
   "dependencies": {
     "@boon4681/giri": "^0.0.3-alpha-13",
