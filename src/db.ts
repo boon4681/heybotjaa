@@ -1,6 +1,11 @@
 import * as duckdb from "duckdb";
+import * as fs from "fs";
+import * as path from "path";
 
-const db = new duckdb.Database(":memory:");
+const dbPath = path.join(process.cwd(), "data", "heybot.duckdb");
+fs.mkdirSync(path.dirname(dbPath), { recursive: true });
+
+const db = new duckdb.Database(dbPath);
 const conn = db.connect();
 
 export function initDb() {
